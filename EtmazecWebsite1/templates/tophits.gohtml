@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <meta charset="utf-8">
+    <title>Artist's Top Hits retrieval</title>
+  </head>
+  <link rel="stylesheet" href="/public/css/main.css">
+  <body>
+    <h1>TOP HITS</h1>
+    <nav>
+    	<ul>
+    		<li><a href="/home">HOME PAGE</a>
+    	</ul>
+    </nav>
+    {{if .Firstname}}
+    The artist you chose is {{.Firstname}}
+    {{end}}
+  <form action="/tophits" method="post">
+	<label for="fname">Artist's Name</label>
+	<input type="text" name="fname">
+	<input type="submit">
+</form>
+  </body>
+</html>

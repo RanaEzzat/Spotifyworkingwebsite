@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Artist's albums retrieval</title>
+</head>
+<link rel="stylesheet" href="/public/css/main.css">
+<body>
+
+</body>
+</html>
+
+<h1>Get Albums</h1>
+<nav>
+	<ul>
+		<li><a href="/home">HOME PAGE</a>
+	</ul>
+</nav>
+
+{{if .Firstname}}
+The artist you chose is {{.Firstname}}
+{{end}}
+
+<form action="/albums" method="post">
+	<label for="fname">Please type in the artist's name and click on submit to get the artist's albums : </label>
+	<input type="text" name="fname">
+	<input type="submit" >
+</form>
